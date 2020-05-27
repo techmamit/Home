@@ -183,3 +183,95 @@ table tr td:nth-child(3){
 }
  
  ```
+ 
+### 5 Forms
+
+##### html
+<form>
+
+        <label class="hidden-labels" for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="Email">
+
+        <label class="hidden-labels"  for="password">Password</label>
+        <input type="password" name="password" id="password" placeholder="Password">
+
+        <select>
+          <option>Initially view...</option>
+          <option>My Profile</option>
+          <option>Inbox</option>
+          <option>Account Settings</option>
+        </select>
+
+        <input type="submit" value="Sign In">
+
+        <label>
+          <input type="checkbox" name="remember" checked="checked" value="yes">
+          <span class="checkbox-text">Stay signed in</span>
+        </label>
+
+      </form>
+
+##### css
+```
+form{
+  background-color: #e8e8e8;
+    padding:40px;
+}
+
+input,
+select{
+  font-family: Tahoma, sans-serif;
+  font-size: 100%;
+
+
+}
+
+input[type="email"],
+input[type="password"],
+input[type="submit"],
+select{
+  width: 100%;
+  padding: 10px;
+  height: 40px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus,
+select {
+border: 1px solid #869960;
+box-shadow: inset 2px 2px 2px rgba(0,0,0,.2);
+}
+
+.hidden-labels{
+  position: absolute;
+  height: 0;
+  width:0;
+  overflow: hidden;
+  visibility: hidden;
+   
+}
+
+
+input[type="submit"]{
+  display:block;
+  color: white;
+  background-color: #869960;
+  border: 1px solid #798a57;
+  border-radius: 3px;
+  
+}
+
+input[type="submit"]:focus,
+input[type="submit"]:hover{
+  background-color: #798a57;
+  border: 1px solid #535e38;
+  
+}
+
+.checkbox-text{
+  font-size: 85%;
+  color: #888
+}
+```
